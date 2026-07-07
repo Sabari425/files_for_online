@@ -1,0 +1,69 @@
+-> with switch
+
+#include <LPC214x.h>
+
+void delay(int x);
+int main(void){
+	PINSEL0 = 0X00000000;
+	IODIR0 = 0X00000400;
+	while(1){
+	   if(IOPIN1 & 0X02000000)			   
+	{
+			IOPIN0 = 0X00000400;
+	
+	}
+	else{
+           IOPIN0=0X00000000;
+	}
+}
+}
+void delay(int x){
+	unsigned int y,z;
+	
+		for(y=x;y>0;y--)
+			for(z=0;z<x;z++);
+		
+}
+
+
+
+
+
+--------------------------------------------------------------
+
+
+-> with timer
+
+#include <LPC214x.h>
+
+void delay(int x);
+int main(void){
+	PINSEL0 = 0X00000000;
+	IODIR0 = 0X00000400;
+	while(1){
+	   IOPIN0 =0X00000400;
+	   delay(1000);
+	   IOPIN0=0X00000000;
+	   delay(2000);
+	}
+}
+
+void delay(int x){
+	unsigned int y,z;
+	
+		for(y=x;y>0;y--)
+			for(z=0;z<x;z++);
+		
+}
+
+
+
+
+
+
+-------------------------------------------------------------
+
+
+
+
+
