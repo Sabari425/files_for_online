@@ -1,7 +1,6 @@
 #include <LPC214x.h>
 
 int main(void){
-    unsigned int sw;
     PINSEL2 = 0x00000000;
     IODIR1 = 0x00FF0000;      // LEDs output
 
