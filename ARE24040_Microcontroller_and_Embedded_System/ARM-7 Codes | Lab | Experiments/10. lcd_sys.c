@@ -14,7 +14,7 @@ void delay(unsigned int);
 
 const unsigned char cmd[4] = {0x28, 0x0C, 0x06, 0x01};
 unsigned char msg[]  = {" Sharbesh"};
-unsigned char msg1[] = {" jk "};
+unsigned char msg1[] = {" Loves "};
 
 int main(void)
 {
