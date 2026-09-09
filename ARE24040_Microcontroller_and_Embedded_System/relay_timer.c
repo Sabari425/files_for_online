@@ -3,9 +3,8 @@
 void initPLL(void){
 PLL0CFG = 0x24 ;
 PLL0CON = 0X01;
-
 PLL0FEED = 0xAA;
-PLL0FEED = 0XAA;
+PLL0FEED = 0X55;
 
 while((PLL0STAT & 0x400) == 0);
 PLL0CON = 0x03;
